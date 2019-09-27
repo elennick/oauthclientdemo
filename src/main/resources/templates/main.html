@@ -8,7 +8,7 @@
 <br/>
 <center>
     <form th:action="${@environment.getProperty('oauth.authorize-endpoint')}">
-        <input type="hidden" name="client_id" value="dragon-client"/>
+        <input type="hidden" name="client_id" th:value="${clientId}"/>
         <input type="hidden" name="response_type" value="code"/>
         <input type="hidden" name="redirect_uri" value="http://localhost:8080/callback"/>
         <input type="hidden" name="state" value="12345"/>

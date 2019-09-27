@@ -51,9 +51,11 @@ public class OAuthClientDemoController {
 
         log.info("codeChallenge = " + codeChallenge);
         log.info("hashedCodeChallenge = " + hashedCodeChallenge);
+        log.info("clientId = " + clientId);
 
         model.addAttribute("hashedCodeChallenge", hashedCodeChallenge);
         model.addAttribute("accessToken", "NONE");
+        model.addAttribute("clientId", clientId);
 
         return "main";
     }
